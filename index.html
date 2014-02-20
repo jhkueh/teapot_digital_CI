@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>TEAPOT Digital | Web Design | Website Development Melbourne</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8" />
+	<meta name="robots" content="NOINDEX, NOFOLLOW" /> <!-- <<==For demo purposes -->
+	<link rel="stylesheet" type="text/css" href="./css/site.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<script type="text/javascript" src="./js/angular.min.js"></script>
+	<script type="text/javascript" src="./js/ui-bootstrap-custom-tpls-0.10.0.js"></script>
+	<script language="javascript" type="text/javascript">
+		angular.module('slideToggleApp', ['ui.bootstrap']);
+		function CollapseCtrl($scope) {
+			$scope.isCollapsed = true;
+
+			$scope.submitForm = function() {
+				$scope.submitted = true;
+
+				if ($scope.shopaform.$valid) {
+					msg = 'Hi '+ $scope.form_67_fname + ', we love to hear from you. Unfortunately this is just a demo.';
+					alert(msg);
+				}
+			}
+		};
+	</script>
+</head>
+<body class="default" ng-app="slideToggleApp">
+	<!--[if lt IE 8]>
+		<p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+	<form name="shopaform" id="shopaform" enctype="multipart/form-data" ng-submit="submitForm()" ng-controller="CollapseCtrl" novalidate><a name="top"></a>
+	<div align="center">
+		<div class="main" >
+			<div class="logo"><img src = "./img/logo.png" alt="Teapot Digital" title="Teapot Digital" border="0" /></div>
+			<div class="content"><p class="cnum">p. &nbsp;<a href = "tel:0393298286">(03) 9329 8286</a>&nbsp;&nbsp;&nbsp;&nbsp; m.&nbsp; <a href = "tel:0412075277">0412 075 277</a></p>
+			<p class="caddr">Suite 7, 204 Dryburgh St, North Melbourne&nbsp; VIC&nbsp; 3051</p>
+			<p class="cinfo">Melbourne digital agency delivering design-driven solutions in web, social and print media.</p>
+			<p>&nbsp;</p>
+			<div>
+				<div class="cfheader" ng-Click="isCollapsed =! isCollapsed">Click here to Contact us with your enquiry</div>
+				<p>
+				<div class="contactblk" align="center" collapse="isCollapsed">
+					<div class="form_field">
+						<div class="frmrow">
+							<label class="labelfield" for="form_67_fname" id="t_form_67_fname">First Name<span class='mandatory'> *</span>
+								<div class="tfvHighlight">
+									<span ng-show="shopaform.form_67_fname.$error.required && submitted"> Required</span>
+									<span ng-show="shopaform.form_67_fname.$error.pattern && submitted">Invalid</span>
+								</div>
+							</label>
+							<input name="form_67_fname" ng-model="form_67_fname" id="form_67_fname" class="htmlIText htmlIForm form_67" type="text" size="20" value="" ng-pattern="/^[a-zA-Z]*$/" required/>
+						</div>
+						<div class="frmrow">
+							<label class="labelfield" for="form_67_lname" id="t_form_67_lname">Last Name<span class='mandatory'> *</span>
+								<div class="tfvHighlight">
+									<span ng-show="shopaform.form_67_lname.$error.required && submitted"> Required</span>
+									<span ng-show="shopaform.form_67_lname.$error.pattern && submitted">Invalid</span>
+								</div>
+							</label>
+							<input name="form_67_lname" ng-model="form_67_lname" id="form_67_lname" class="htmlIText htmlIForm form_67" type="text" size="20" value="" ng-pattern="/^[a-zA-Z]*$/" required/>
+						</div>
+						<div class="frmrow">
+							<label class="labelfield" for="form_67_email" id="t_form_67_email">Email <span class='mandatory'>*</span>
+								<div class="tfvHighlight">
+									<span ng-show="shopaform.form_67_email.$error.required && submitted"> Required</span>
+									<span ng-show="shopaform.form_67_email.$error.pattern && submitted">Invalid</span>
+								</div>
+							</label>
+							<input name="form_67_email" ng-model="form_67_email" id="form_67_email" class="htmlIText htmlIForm form_67" type="email" size="20" value="" ng-pattern="/^[\w-\.]+\@[\w\.-]+\.[a-z]{2,4}$/" required/>
+						</div>
+						<div class="frmrow">
+							<label class="labelfield" for="form_67_phone" id="t_form_67_phone">Phone<span class='mandatory'> *</span>
+								<div class="tfvHighlight">
+									<span ng-show="shopaform.form_67_phone.$error.required && submitted"> Required</span>
+									<span ng-show="shopaform.form_67_phone.$error.pattern && submitted">Invalid</span>
+								</div>
+							</label>
+							<input name="form_67_phone" ng-model="form_67_phone" id="form_67_phone" class="htmlIText htmlIForm form_67" type="tel" size="25" value="" ng-pattern="/^[0-9+]{8,12}$/" required/>
+						</div>
+					</div>
+					<div class="form_field">
+						<div class="frmrow">
+							<label class="labelfield" for="form_67_company" id="t_form_67_company">Company</label>
+							<input name="form_67_company" id="form_67_company" class="htmlIText htmlIForm form_67" type="text" size="25" value=""  />
+						</div>
+						<div class="frmrow">
+							<label class="labelfield" for="form_67_comments" id="t_form_67_comments">Comments</label>
+							<textarea name="form_67_comments" id="form_67_comments" class="htmlIMemo htmlIForm form_67" cols="40" rows="10" placeholder="Please leave a comment, {{form_67_fname}}"></textarea>
+						</div>
+						<div class="frmrow"><span><input name="form_67_submit" id="form_67_submit" class="htmlISubmit htmlIForm form_67" type="submit" value="Submit" /></span>
+						<span style="display: none;"><input name="form_67_subscribe_46" id="form_67_subscribe_46" class="htmlICheckbox htmlIForm form_67" type="checkbox" checked="checked" /><input type="hidden" name="form_67_subscribe_46_submit" value="A" /></span>
+						</div>
+					</div>
+					<div class="clearcss">&nbsp;</div>
+				</div>
+				</p>
+			</div>
+			<p>&nbsp;</p>
+			<p class="cfbook"><a href="#" target="_blank" title="Facebook"><img src="./img/facebook.png" border="0" /></a></p></div>
+		</div>
+	</div>
+	</form>
+	</body>
+</html>
