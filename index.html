@@ -5,25 +5,8 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=8" />
 	<meta name="robots" content="NOINDEX, NOFOLLOW" /> <!-- <<==For demo purposes -->
-	<link rel="stylesheet" type="text/css" href="./css/site.css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-	<script type="text/javascript" src="./js/angular.min.js"></script>
-	<script type="text/javascript" src="./js/ui-bootstrap-custom-tpls-0.10.0.js"></script>
-	<script language="javascript" type="text/javascript">
-		angular.module('slideToggleApp', ['ui.bootstrap']);
-		function CollapseCtrl($scope) {
-			$scope.isCollapsed = true;
-
-			$scope.submitForm = function() {
-				$scope.submitted = true;
-
-				if ($scope.shopaform.$valid) {
-					msg = 'Hi '+ $scope.form_67_fname + ', we love to hear from you. Unfortunately this is just a demo.';
-					alert(msg);
-				}
-			}
-		};
-	</script>
+	<link rel="stylesheet" type="text/css" href="./css/site.css" />
 </head>
 <body class="default" ng-app="slideToggleApp">
 	<!--[if lt IE 8]>
@@ -32,7 +15,7 @@
 	<form name="shopaform" id="shopaform" enctype="multipart/form-data" ng-submit="submitForm()" ng-controller="CollapseCtrl" novalidate><a name="top"></a>
 	<div align="center">
 		<div class="main" >
-			<div class="logo"><img src = "./img/logo.png" alt="Teapot Digital" title="Teapot Digital" border="0" /></div>
+			<div class="logo"><img src = "./img/logo.min.png" alt="Teapot Digital" title="Teapot Digital" border="0" /></div>
 			<div class="content"><p class="cnum">p. &nbsp;<a href = "tel:0393298286">(03) 9329 8286</a>&nbsp;&nbsp;&nbsp;&nbsp; m.&nbsp; <a href = "tel:0412075277">0412 075 277</a></p>
 			<p class="caddr">Suite 7, 204 Dryburgh St, North Melbourne&nbsp; VIC&nbsp; 3051</p>
 			<p class="cinfo">Melbourne digital agency delivering design-driven solutions in web, social and print media.</p>
@@ -97,10 +80,31 @@
 				</p>
 			</div>
 			<p>&nbsp;</p>
+<<<<<<< HEAD
 			<p class="cfbook"><a href="#" target="_blank" title="Facebook"><img src="./img/facebook.png" border="0" /></a></p>
+=======
+			<p class="cfbook"><a href="#" target="_blank" title="Facebook"><img src="./img/facebook.min.png" border="0" /></a></p>
+>>>>>>> origin/gh-pages
 			<p class="small">This is just an improvement demo page. Click <a href="http://www.teapotdigital.com.au/">here</a> for original site.</p></div>
 		</div>
 	</div>
 	</form>
+		<script type="text/javascript" src="./js/angular.min.js"></script>
+		<script type="text/javascript" src="./js/ui-bootstrap-custom-tpls-0.10.0.min.js"></script>
+		<script language="javascript" type="text/javascript">
+			angular.module('slideToggleApp', ['ui.bootstrap']);
+			function CollapseCtrl($scope) {
+				$scope.isCollapsed = true;
+
+				$scope.submitForm = function() {
+					$scope.submitted = true;
+
+					if ($scope.shopaform.$valid) {
+						msg = 'Hi '+ $scope.form_67_fname + ', we love to hear from you. Unfortunately this is just a demo.';
+						alert(msg);
+					}
+				}
+			};
+		</script>
 	</body>
 </html>
