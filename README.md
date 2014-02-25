@@ -1,4 +1,4 @@
-An Improvement Demo Page (Of [Teapot Digital](teapotdigital.com.au)
+An Improvement Demo Page (Of [Teapot Digital](teapotdigital.com.au))
 ============================================
 
 Demo [here](jhkueh.github.io/teapot_digital_CI/)
